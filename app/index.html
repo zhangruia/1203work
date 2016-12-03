@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="./prd/styles/app.css" />
+</head>
+<body>
+	<div ng-controller="packFile">
+		<label>
+			<input type="text" placeholder={{starts}} ng-model="searchText" />
+			<input type="text" placeholder={{ends}} ng-model="searchTest" />
+		</label>
+		<table border="1">
+			<thead>
+				<tr>
+					<td ng-click="rank='first';argen=!argen">FirstName
+						<span ng-click="ishas($event)" ng-if="hide" ng-class="{true:'top',false:'buttom'}[or]"></span>
+					</td>
+					<td ng-click="rank='last';argen=!argen">LastName
+						<span ng-click="ishas($event)" ng-if="hide"></span>
+					</td>
+					<td ng-click="rank='gender';argen=!argen">Gender
+						<span ng-click="ishas($event)" ng-if="hide"></span>
+					</td>
+					<td ng-click="rank='salary';argen=!argen">Salary
+						<span ng-click="ishas($event)" ng-if="hide"></span>
+					</td>
+					<td ng-click="rank='price';argen=!argen">Salary
+						<span ng-click="ishas($event)" ng-if="hide"></span>
+					</td>
+					<td ng-click="rank='birthday';argen=!argen">Birthday
+						<span ng-click="ishas($event)" ng-if="hide"></span>
+					</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="every in peopleList | filter:search:obj | orderBy:rank:argen">
+					<td>{{every.first}}</td>
+					<td>{{every.last}}</td>
+					<td>{{every.gender}}</td>
+					<td>{{every.salary}}</td>
+					<td>{{every.price | currency:'￥'}}</td>
+					<td>{{every.birthday}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script src="./src/libs/angular.min.js"></script>
+	<script src="./prd/scripts/app.js"></script>
+</body>
+</html>

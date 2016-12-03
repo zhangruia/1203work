@@ -1,0 +1,41 @@
+body,html
+{
+	width: 100%;
+}
+html
+{
+	font-size:100px;
+}
+div
+{
+	font-size: 0.16rem;
+	table
+	{
+		width: 100%;
+		margin-top: 0.1rem;
+		border-collapse: collapse;
+		td
+		{
+			padding: 0.05rem 0.04rem;
+			text-align: center;
+		}
+	}
+}
+.buttom
+{
+	width: 0rem;
+	height: 0rem;
+	display: inline-block;
+	border-top: 0.08rem solid #000;
+	border-left: 0.08rem solid transparent;
+	border-right: 0.08rem solid transparent;
+}
+.top
+{
+	width: 0rem;
+	height: 0rem;
+	display: inline-block;
+	border-bottom: 0.08rem solid #000;
+	border-left: 0.08rem solid transparent;
+	border-right: 0.08rem solid transparent; 
+}
